@@ -52,6 +52,22 @@ class Solution(object):
         final = sum(Stack)
 
         return final
+       
+    def truncateSentence(self, s, k):
+        """
+        :type s: str
+        :type k: int
+        :rtype: str
+        """
+        spl = s.split(" ")
+        new = []
+        count = 0
+        for item in spl:
+            if count < k:
+                new.append(item)
+                count += 1
+
+        return ' '.join(new)
     
 nums = [1,2,3,4]
 nums2 = [1,1,1,1,1]
