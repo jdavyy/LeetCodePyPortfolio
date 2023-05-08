@@ -39,6 +39,20 @@ class Solution(object):
         stack.pop(0)
         return stack
     
+    def sumOfMultiples(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        Stack  = []
+        for i in range(1,n+1):
+            if i % 3 == 0 or i % 5 == 0 or i % 7 == 0:
+                Stack.append(i)
+        
+        final = sum(Stack)
+
+        return final
+    
 nums = [1,2,3,4]
 nums2 = [1,1,1,1,1]
 nums3 = [3,1,2,10,1]
